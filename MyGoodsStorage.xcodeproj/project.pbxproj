@@ -21,6 +21,7 @@
 		FD817C5A2A0E68EE00B5A7BB /* WelcomeScreenText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD817C592A0E68EE00B5A7BB /* WelcomeScreenText.swift */; };
 		FD817C5D2A0E690B00B5A7BB /* GoodsStorageContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD817C5B2A0E690B00B5A7BB /* GoodsStorageContainer.xcdatamodeld */; };
 		FD817C632A0E6A5600B5A7BB /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD817C622A0E6A5600B5A7BB /* PersistenceController.swift */; };
+		FDD3AD722A0F539400EA1880 /* TextInBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3AD712A0F539400EA1880 /* TextInBlock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		FD817C592A0E68EE00B5A7BB /* WelcomeScreenText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenText.swift; sourceTree = "<group>"; };
 		FD817C5C2A0E690B00B5A7BB /* GoodsStorageContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoodsStorageContainer.xcdatamodel; sourceTree = "<group>"; };
 		FD817C622A0E6A5600B5A7BB /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		FDD3AD712A0F539400EA1880 /* TextInBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInBlock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				FD817C592A0E68EE00B5A7BB /* WelcomeScreenText.swift */,
+				FDD3AD712A0F539400EA1880 /* TextInBlock.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				FD817C4C2A0E687100B5A7BB /* WelcomeView.swift in Sources */,
 				FD817C3C2A0E682300B5A7BB /* MyGoodsStorageApp.swift in Sources */,
 				FD817C4E2A0E688100B5A7BB /* MainScreenView.swift in Sources */,
+				FDD3AD722A0F539400EA1880 /* TextInBlock.swift in Sources */,
 				FD817C522A0E68A400B5A7BB /* CustomStorageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

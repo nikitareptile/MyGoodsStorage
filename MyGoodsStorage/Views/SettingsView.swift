@@ -9,8 +9,9 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    @State var single = false
+    @State var single = UserDefaults.standard.bool(forKey: "isUserSingle")
     @State var countOfFamilyMembers = 2
+    @State var amountOfMeals = 3
     
     var body: some View {
         List {
@@ -18,31 +19,59 @@ struct SettingsView: View {
                 Toggle(isOn: $single) {
                     Text("Single")
                 }
-                
+                .onChange(of: single) { newValue in
+                    changeSingleDefaults(value: newValue)
+                }
+                if single {
+                    Stepper(value: $amountOfMeals, in: 1...5) {
+                        HStack {
+                            Text("Amount of meals")
+                            Spacer()
+                            TextInBlock(title: "\(amountOfMeals)")
+                        }
+                    }
+                }
             } header: {
                 Text("About you")
+            } footer: {
+                if single {
+                    Text("4-5 count of meals recommended")
+                }
             }
-            
             if !single {
                 Section {
-                    HStack {
-                        Text("Family members")
-                        TextField(
-                            "\(countOfFamilyMembers)",
-                            value: $countOfFamilyMembers,
-                            formatter: NumberFormatter()
-                        )
-                        .multilineTextAlignment(.trailing)
+                    Stepper(value: $countOfFamilyMembers, in: 2...10) {
+                        HStack {
+                            Text("Family members")
+                            Spacer()
+                            TextInBlock(title: "\(countOfFamilyMembers)")
+                        }
+                    }
+                    Stepper(value: $amountOfMeals, in: 1...5) {
+                        HStack {
+                            Text("Amount of meals")
+                            Spacer()
+                            TextInBlock(title: "\(amountOfMeals)")
+                        }
                     }
                 } header: {
                     Text("About family")
+                } footer: {
+                    Text("4-5 amount of meals recommended")
                 }
+                .multilineTextAlignment(.trailing)
+
             }
 
             LabeledContent("Version", value: "0.01")
         }
         .navigationTitle("Settings ⚙️")
     }
+    
+    private func changeSingleDefaults(value: Bool) {
+        UserDefaults.standard.set(value, forKey: "isUserSingle")
+    }
+    
 }
 
 struct SettingsView_Previews: PreviewProvider {

@@ -47,7 +47,15 @@ struct WelcomeView: View {
             }
         }
         .padding()
+        .onAppear {
+            setDefaults()
+        }
     }
+    
+    private func setDefaults() {
+        UserDefaults.standard.set(true, forKey: "isUserSingle")
+    }
+    
 }
 
 struct WelcomeView_Previews: PreviewProvider {

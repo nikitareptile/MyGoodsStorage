@@ -84,7 +84,7 @@ struct MainScreenView: View {
             }
             
             Section {
-                NavigationLink(destination: Text("Settings")) {
+                NavigationLink(destination: SettingsView()) {
                     HStack {
                         Text("⚙️")
                         Text("Settings")
