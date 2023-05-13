@@ -1,0 +1,58 @@
+/*
+  English
+  Localizable.strings
+  MyGoodsStorage
+
+  Created by Никита Тихонюк on 13.05.2023.
+  
+*/
+
+// WelcomeView
+"welcome-string" = "Welcome to";
+"welcomeFirstTitle-string" = "Keep an eye";
+"welcomeSecondTitle-string" = "Generate a menu";
+"welcomeThirdTitle-string" = "Save time";
+"welcomeFirstSubtitle-string" = "Add and remove products in your home.";
+"welcomeSecondSubtitle-string" = "Don't think about what to cook.";
+"welcomeThirdSubtitle-string" = "Choose recipes from the products you have.";
+
+// MainScreenView
+"home-string" = "Home 🏠";
+"storagesHeader-string" = "Storage";
+"meal-string" = "Meal for now";
+"menu-string" = "Menu";
+"shoppingList-string" = "Shopping list";
+"generate-string" = "Generate";
+"settings-string" = "Settings";
+
+// SettingsView
+"singleUser-string" = "Single";
+"amountOfMeals-string" = "Amount of meals";
+"aboutYou-string" = "About you";
+"familyMembers-string" = "Family members";
+"aboutFamily-string" = "About family";
+"recommendedMeals-string" = "4-5 count of meals recommended";
+"version-string" = "Version";
+"settingsTitle-string" = "Settings ⚙️";
+
+// AddProductView
+"productName-string" = "Name";
+"productType-string" = "Product type";
+"productMeasure-string" = "Measure";
+"favorite-string" = "Favorite";
+
+// AddStorageView
+"newStorageName-string" = "Storage name";
+"alertTitle-string" = "Name of the storage can't be less then 3 characters 😨";
+
+// Alerts
+"deleteAlertTitle-string" = "Delete this storage?";
+"deleteAlertText-string" = "All inside saved products will not be deleted";
+
+// Buttons
+"continue-string" = "Continue";
+"addFirstStorage-string" = "Add first storage";
+"delete-string" = "Delete";
+"cancel-string" = "Cancel";
+"addStorage-string" = "Add storage";
+"addProduct-string" = "Add product";

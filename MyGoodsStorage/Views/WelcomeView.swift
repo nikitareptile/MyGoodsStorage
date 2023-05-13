@@ -11,9 +11,11 @@ struct WelcomeView: View {
     
     @State var screenHeight: CGFloat = UIScreen.main.bounds.height
     
+    let userUniqID = UUID().uuidString
+    
     var body: some View {
         VStack {
-            Text("Welcome to")
+            Text("welcome-string")
                 .font(.title)
                 .padding(.top, screenHeight * 0.08)
             Text("Goods Storage")
@@ -22,22 +24,22 @@ struct WelcomeView: View {
                 .padding(.bottom, screenHeight * 0.08)
             WelcomeScreenText(
                 icon: "👀",
-                title: "Keep an eye",
-                subTitle: "Add and remove products in your home.")
+                title: "welcomeFirstTitle-string",
+                subTitle: "welcomeFirstSubtitle-string")
             WelcomeScreenText(
                 icon: "🍱",
-                title: "Generate a menu",
-                subTitle: "Don't think about what to cook.")
+                title: "welcomeSecondTitle-string",
+                subTitle: "welcomeSecondSubtitle-string")
             WelcomeScreenText(
                 icon: "🍽️",
-                title: "Save time",
-                subTitle: "Choose recipes from the products you have.")
+                title: "welcomeThirdTitle-string",
+                subTitle: "welcomeThirdSubtitle-string")
             Spacer()
             Button {
                 UserDefaults.standard.set(true, forKey: "wasLaunched")
             } label: {
                 NavigationLink(destination: MainScreenView()) {
-                    Text("Continue")
+                    Text("continue-string")
                         .foregroundColor(.white)
                         .font(.headline)
                         .frame(maxWidth: .infinity, maxHeight: 55)
@@ -54,6 +56,7 @@ struct WelcomeView: View {
     
     private func setDefaults() {
         UserDefaults.standard.set(true, forKey: "isUserSingle")
+        UserDefaults.standard.set(userUniqID, forKey: "userID")
     }
     
 }
@@ -62,6 +65,7 @@ struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             WelcomeView()
+                .environment(\.locale, .init(identifier: "en"))
         }
     }
 }

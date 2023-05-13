@@ -29,7 +29,7 @@ struct MainScreenView: View {
                         showingAddStorageSheet.toggle()
                     } label: {
                         HStack {
-                            Text("Add first storage")
+                            Text("addFirstStorage-string")
                             Spacer()
                             Image(systemName: "plus")
                         }
@@ -47,53 +47,53 @@ struct MainScreenView: View {
                     }
                     .alert(isPresented: $showingDeleteAlert) {
                         Alert(
-                            title: Text("Delete this storage?"),
-                            message: Text("All inside saved products will not be deleted"),
-                            primaryButton: .destructive(Text("Delete")) {
+                            title: Text("deleteAlertTitle-string"),
+                            message: Text("deleteAlertText-string"),
+                            primaryButton: .destructive(Text("delete-string")) {
                                 dataViewModel.deleteStorage(offsets: indexSetToDelete!)
                             },
-                            secondaryButton: .cancel(Text("Cancel"))
+                            secondaryButton: .cancel(Text("cancel-string"))
                         )
                     }
                 }
             } header: {
-                Text("Storages")
+                Text("storagesHeader-string")
             }
             
             Section {
                 NavigationLink(destination: Text("Meal")) {
                     HStack {
                         Text("🍽️")
-                        Text("Meal")
+                        Text("meal-string")
                     }
                 }
                 NavigationLink(destination: Text("Menu")) {
                     HStack {
                         Text("🍱")
-                        Text("Menu")
+                        Text("menu-string")
                     }
                 }
                 NavigationLink(destination: Text("Shopping list")) {
                     HStack {
                         Text("🛒")
-                        Text("Shopping list")
+                        Text("shoppingList-string")
                     }
                 }
             } header: {
-                Text("Generate")
+                Text("generate-string")
             }
             
             Section {
                 NavigationLink(destination: SettingsView()) {
                     HStack {
                         Text("⚙️")
-                        Text("Settings")
+                        Text("settings-string")
                     }
                 }
             }
             
         }
-        .navigationTitle("Home 🏠")
+        .navigationTitle("home-string")
         .navigationBarTitleDisplayMode(.large)
         .navigationBarBackButtonHidden()
         .listStyle(.insetGrouped)

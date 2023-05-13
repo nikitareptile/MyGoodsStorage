@@ -10,7 +10,7 @@ import SwiftUI
 struct RootView: View {
     var body: some View {
         NavigationView {
-            if UserDefaults.standard.bool(forKey: "wasLaunched") {
+            if UserDefaults.standard.bool(forKey: "wasLaunched") == true {
                 MainScreenView()
             } else {
                 WelcomeView()
@@ -23,6 +23,7 @@ struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             RootView()
+                .environment(\.locale, .init(identifier: "en"))
         }
     }
 }

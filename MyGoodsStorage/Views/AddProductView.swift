@@ -26,41 +26,36 @@ struct AddProductView: View {
     var body: some View {
         Form {
             Section {
-                TextField("Name", text: $newProductName)
+                TextField("productName-string", text: $newProductName)
                 Picker(selection: $newProductGroup) {
                     ForEach(groupOptions, id: \.self) { group in
                         Text(group).tag(group)
                     }
                 } label: {
-                    Text("Product type")
+                    Text("productType-string")
                 }
                 Picker(selection: $newProductMeasure) {
                     ForEach(measureOptions, id: \.self) { measure in
                         Text(measure).tag(measure)
                     }
                 } label: {
-                    Text("Measure")
+                    Text("productMeasure-string")
                 }
                 Stepper(value: $newProductCount, in: 1...10000) {
-                    HStack {
-                        Text("Count")
-                        Divider()
-                            .padding(.horizontal)
-                        TextField(
-                            "\(newProductCount)",
-                            value: $newProductCount,
-                            formatter: NumberFormatter()
-                        )
-                        .multilineTextAlignment(.center)
-                        Divider()
-                            .padding(.horizontal)
-                    }
-                }
-                Toggle(isOn: $isNewProductFavorite) {
-                    Text("Favorite")
+                    TextField(
+                        "\(newProductCount)",
+                        value: $newProductCount,
+                        formatter: NumberFormatter()
+                    )
+                    .keyboardType(.numberPad)
                 }
             } header: {
                 Text("")
+            }
+            Section {
+                Toggle(isOn: $isNewProductFavorite) {
+                    Text("favorite-string")
+                }
             }
             Section {
                 Button {
@@ -68,7 +63,7 @@ struct AddProductView: View {
                 } label: {
                     HStack {
                         Spacer()
-                        Text("Add product")
+                        Text("addProduct-string")
                             .foregroundColor(.white)
                         Spacer()
                     }

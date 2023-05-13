@@ -20,7 +20,7 @@ struct AddStorageView: View {
     var body: some View {
         Form {
             Section {
-                TextField("New storage name", text: $newStorageTitle)
+                TextField("newStorageName-string", text: $newStorageTitle)
             } header: {
                 Text("")
             }
@@ -31,7 +31,7 @@ struct AddStorageView: View {
                 } label: {
                     HStack {
                         Spacer()
-                        Text("Add storage")
+                        Text("addStorage-string")
                             .foregroundColor(.white)
                         Spacer()
                     }
@@ -43,7 +43,7 @@ struct AddStorageView: View {
     
     func storageTitleIsAppropriate() -> Bool {
         if newStorageTitle.count < 3 {
-            alertMessage = "Name of the storage can't be less then 3 characters 😨"
+            alertMessage = "alertTitle-string"
             showingAlert.toggle()
             return false
         }

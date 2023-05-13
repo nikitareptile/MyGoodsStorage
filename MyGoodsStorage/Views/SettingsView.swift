@@ -17,7 +17,7 @@ struct SettingsView: View {
         List {
             Section {
                 Toggle(isOn: $single) {
-                    Text("Single")
+                    Text("singleUser-string")
                 }
                 .onChange(of: single) { newValue in
                     changeSingleDefaults(value: newValue)
@@ -25,47 +25,47 @@ struct SettingsView: View {
                 if single {
                     Stepper(value: $amountOfMeals, in: 1...5) {
                         HStack {
-                            Text("Amount of meals")
+                            Text("amountOfMeals-string")
                             Spacer()
                             TextInBlock(title: "\(amountOfMeals)")
                         }
                     }
                 }
             } header: {
-                Text("About you")
+                Text("aboutYou-string")
             } footer: {
                 if single {
-                    Text("4-5 count of meals recommended")
+                    Text("recommendedMeals-string")
                 }
             }
             if !single {
                 Section {
                     Stepper(value: $countOfFamilyMembers, in: 2...10) {
                         HStack {
-                            Text("Family members")
+                            Text("familyMembers-string")
                             Spacer()
                             TextInBlock(title: "\(countOfFamilyMembers)")
                         }
                     }
                     Stepper(value: $amountOfMeals, in: 1...5) {
                         HStack {
-                            Text("Amount of meals")
+                            Text("amountOfMeals-string")
                             Spacer()
                             TextInBlock(title: "\(amountOfMeals)")
                         }
                     }
                 } header: {
-                    Text("About family")
+                    Text("aboutFamily-string")
                 } footer: {
-                    Text("4-5 amount of meals recommended")
+                    Text("recommendedMeals-string")
                 }
                 .multilineTextAlignment(.trailing)
 
             }
 
-            LabeledContent("Version", value: "0.01")
+            LabeledContent("version-string", value: "0.0.1")
         }
-        .navigationTitle("Settings ⚙️")
+        .navigationTitle("settingsTitle-string")
     }
     
     private func changeSingleDefaults(value: Bool) {

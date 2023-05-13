@@ -1,0 +1,58 @@
+/*
+  Russian
+  Localizable.strings
+  MyGoodsStorage
+
+  Created by Никита Тихонюк on 13.05.2023.
+  
+*/
+
+// Welcome view
+"welcome-string" = "Добро пожаловать в";
+"welcomeFirstTitle-string" = "Следите за всем";
+"welcomeSecondTitle-string" = "Генерируйте меню";
+"welcomeThirdTitle-string" = "Экономьте время";
+"welcomeFirstSubtitle-string" = "Добавляйте и удаляйте продукты в вашем доме.";
+"welcomeSecondSubtitle-string" = "Не думайте о том, что приготовить.";
+"welcomeThirdSubtitle-string" = "Выбирайте рецепты из имеющихся продуктов.";
+
+// MainScreenView
+"home-string" = "Главная 🏠";
+"storagesHeader-string" = "Хранилище";
+"meal-string" = "Поесть сейчас";
+"menu-string" = "Меню";
+"shoppingList-string" = "Список покупок";
+"generate-string" = "Генерация";
+"settings-string" = "Настройки";
+
+// SettingsView
+"singleUser-string" = "Один человек";
+"amountOfMeals-string" = "Приёмов пищи";
+"aboutYou-string" = "О себе";
+"familyMembers-string" = "Членов семьи";
+"aboutFamily-string" = "О семье";
+"recommendedMeals-string" = "Рекомендуем есть 4-5 раз в день";
+"version-string" = "Версия";
+"settingsTitle-string" = "Настройки ⚙️";
+
+// AddProductView
+"productName-string" = "Название";
+"productType-string" = "Тип";
+"productMeasure-string" = "Величина измерения";
+"favorite-string" = "Любимое";
+
+// AddStorageView
+"newStorageName-string" = "Название";
+"alertTitle-string" = "Хранилище нельзя назвать словом, в котором меньше 3 букв 😨";
+
+// Alerts
+"deleteAlertTitle-string" = "Удалить это хранилище?";
+"deleteAlertText-string" = "Сохранённые внутри продукты не будут удалены";
+
+// Buttons
+"continue-string" = "Продолжить";
+"addFirstStorage-string" = "Добавить первое хранилище";
+"delete-string" = "Удалить";
+"cancel-string" = "Отмена";
+"addStorage-string" = "Добавить";
+"addProduct-string" = "Добавить";

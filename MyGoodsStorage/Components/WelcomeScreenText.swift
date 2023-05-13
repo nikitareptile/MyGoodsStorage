@@ -13,8 +13,8 @@ struct WelcomeScreenText: View {
     @State var screenHeight: CGFloat = UIScreen.main.bounds.height
     
     let icon: String
-    let title: String
-    let subTitle: String
+    let title: LocalizedStringKey
+    let subTitle: LocalizedStringKey
     
     var body: some View {
         HStack(spacing: 20) {

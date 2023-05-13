@@ -35,6 +35,7 @@ struct CustomStorageView: View {
         .navigationTitle(storage.title ?? "Error")
         .sheet(isPresented: $showingAddProductSheet) {
             AddProductView()
+                .presentationDetents([.medium])
                 .environment(\.managedObjectContext, self.viewContext)
         }
     }
